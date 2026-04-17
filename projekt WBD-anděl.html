@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="Jan Anděl" content="Jan Anděl + ChatGPT (GPT-5.3)">
+<title>Basketbal</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+    background-image: url("https://images.unsplash.com/photo-1519861531473-9200262188bf");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+nav {
+    background-color: rgba(0,0,0,0.7);
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: orange;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section {
+    padding: 40px;
+    margin: 20px;
+    background-color: rgba(0,0,0,0.6);
+    border-radius: 10px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 42px;
+}
+
+h2 {
+    color: orange;
+}
+
+img {
+    width: 300px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+/* KARTY */
+.cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #111;
+    padding: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 150px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.card:hover {
+    background: orange;
+    color: black;
+}
+
+/* SKRYTÝ TEXT */
+.hidden {
+    display: none;
+    margin-top: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0,0,0,0.8);
+}
+</style>
+
+<script>
+function toggleText(id) {
+    let el = document.getElementById(id);
+    if (el.style.display === "block") {
+        el.style.display = "none";
+    } else {
+        el.style.display = "block";
+    }
+}
+</script>
+
+</head>
+
+<body id="top">
+
+<h1>Basketbal</h1>
+
+<nav>
+    <a href="#historie">Historie</a>
+    <a href="#hraci">Hráči</a>
+    <a href="#galerie">Galerie</a>
+</nav>
+
+<section id="historie">
+    <h2>Historie basketbalu</h2>
+    <p>Basketbal byl vynalezen v roce 1891 Jamesem Naismithem. Dnes patří mezi nejpopulárnější sporty na světě.</p>
+    <a href="#top">Zpět nahoru</a>
+</section>
+
+<section id="hraci">
+    <h2>Legendární hráči</h2>
+    <p>Klikni na hráče a zobrazí se informace:</p>
+
+    <div class="cards">
+        <div class="card" onclick="toggleText('jordan')">Jordan
+            <div id="jordan" class="hidden">Michael Jordan – legenda NBA</div>
+        </div>
+
+        <div class="card" onclick="toggleText('lebron')">LeBron
+            <div id="lebron" class="hidden">LeBron James – současná hvězda</div>
+        </div>
+
+        <div class="card" onclick="toggleText('kobe')">Kobe
+            <div id="kobe" class="hidden">Kobe Bryant – ikona Lakers</div>
+        </div>
+    </div>
+
+    <a href="#top">Zpět nahoru</a>
+</section>
+
+<section id="galerie">
+    <h2>Galerie</h2>
+    <img src="https://images.unsplash.com/photo-1504450758481-7338eba7524a" alt="Basketbal">
+    <p>Basketbal je dynamický a atraktivní sport.</p>
+    <a href="#top">Zpět nahoru</a>
+</section>
+
+<footer>
+    <p>&copy; 2026 Basketbalový web</p>
+</footer>
+
+</body>
+</html>
